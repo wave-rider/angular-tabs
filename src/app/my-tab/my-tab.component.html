@@ -1,0 +1,7 @@
+<div *ngIf="expanded || !aliveParent" class="mytab">
+  <img [src]="getImage()" width="16" height="16" (click)="OnCollapse()">
+  <span (click)="OnClick()">{{ tab.name }}</span>
+  <div *ngIf="tab.tabs.length>0">
+    <app-my-tab-list [tabs]="tab.tabs" [aliveParent]="true" [expanded]="expanded"></app-my-tab-list>
+  </div>
+</div>

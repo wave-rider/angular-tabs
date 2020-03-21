@@ -1,0 +1,8 @@
+<div *ngFor="let t of tabs" class="mytab-list">
+  <span *ngIf="expanded || !aliveParent">
+    <app-my-tab [tab]="t" 
+    (notify)="onNotify()"
+    [aliveParent]="aliveParent" [expanded]="expanded"></app-my-tab>
+  </span>
+</div>
+
